@@ -19,7 +19,7 @@ connection.connect(function (err) {
         console.error("error connecting: " + err.stack);
         return;
     }
-    console.log("connected as id " + connection.threadId);
+
 });
 
 function startApp() {
@@ -73,20 +73,40 @@ function startApp() {
 }
 
 function viewEmployees() {
-    connection.query("SELECT employee.first_name, employee.last_name, role.title, role.salary, department.name, CONCAT(e.first_name, ' ' ,e.last_name) AS Manager FROM employee INNER JOIN role on role.id = employee.role_id INNER JOIN department on department.id = role.department_id left join employee e on employee.manager_id = e.id;",
+    
+    connection.query("SELECT * FROM employee",
         function (err, res) {
-            if (err) throw err
+            if (err) throw err;
+
             console.table(res)
-            startApp()
+
+            startApp();
         })
 }
 
 
 
+// function viewRoles() {
 
+// }
 
+// function viewDepartments() {
 
-app.listen(PORT, function () {
+// }
 
-    console.log("Server listening on: http://localhost:" + PORT);
-});
+// function addEmployee() {
+
+// }
+
+// function addDepartment() {
+
+// }
+
+// function addRole() {
+
+// }
+// function updateEmployee() {
+
+// }
+
+startApp()
