@@ -1,28 +1,8 @@
-const mysql = require("mysql");
 const cTable = require("console.table");
 const inquirer = require("inquirer");
+const connection = require("./config/connection.js");
 
-
-const connection = mysql.createConnection({
-    host: "localhost",
-
-    port: 3306,
-
-    user: "root",
-
-    password: "AH3althycomputer1!",
-    database: "employee_tracker_db"
-});
-
-connection.connect(function (err) {
-    if (err) {
-        console.error("error connecting: " + err.stack);
-        return;
-    }
-
-});
-
-function startApp() {
+function beginApp() {
     inquirer.prompt([
 
         {
@@ -73,30 +53,47 @@ function startApp() {
 }
 
 function viewEmployees() {
-    
-    connection.query("SELECT * FROM employee",
+    let queryString = "SELECT * FROM employees"
+
+    connection.query(queryString,
         function (err, res) {
             if (err) throw err;
 
             console.table(res)
 
-            startApp();
+            beginApp();
         })
 }
 
+function viewRoles() {
+    let queryString = "SELECT * FROM role"
 
+    connection.query(queryString,
+        function (err, res) {
+            if (err) throw err;
 
-// function viewRoles() {
+            console.table(res)
 
-// }
+            beginApp();
+        })
+}
 
-// function viewDepartments() {
+function viewDepartments() {
+    let queryString = "SELECT * FROM department"
 
-// }
+    connection.query(queryString,
+        function (err, res) {
+            if (err) throw err;
 
-// function addEmployee() {
+            console.table(res)
 
-// }
+            beginApp();
+        })
+}
+
+function addEmployee() {
+
+}
 
 // function addDepartment() {
 
@@ -109,4 +106,4 @@ function viewEmployees() {
 
 // }
 
-startApp()
+beginApp();
