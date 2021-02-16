@@ -91,9 +91,9 @@ function viewDepartments() {
         })
 }
 
-function addEmployee() {
+// function addEmployee() {
 
-}
+// }
 
 // function addDepartment() {
 

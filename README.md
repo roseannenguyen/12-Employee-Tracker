@@ -1,10 +1,8 @@
-![badge](https://img.shields.io/github/last-commit/roseannenguyen/11-Express-Note-Taker-Updated) ![badge](https://img.shields.io/badge/license-MIT-informational) ![badge](https://img.shields.io/github/languages/top/roseannenguyen/11-Express-Note-Taker-Updated) ![badge](https://img.shields.io/github/languages/count/roseannenguyen/11-Express-Note-Taker-Updated)
+![badge](https://img.shields.io/github/last-commit/roseannenguyen/12-Employee-Tracker) ![badge](https://img.shields.io/badge/license-MIT-informational) ![badge](https://img.shields.io/github/languages/top/roseannenguyen/12-Employee-Tracker) ![badge](https://img.shields.io/github/languages/count/roseannenguyen/12-Employee-Tracker)
 
 # 12-Employee-Tracker
 
-:computer: [Link to Deployed Application](https://roseannenotes1.herokuapp.com/)
-
-:arrow_right:[Link to Previous Git Hub Repo that Failed](https://github.com/roseannenguyen/11-Express-Note-Taker)
+Will update and work on the application. Currently not working. 
 
 ## Table of Contents
 
@@ -19,9 +17,7 @@
 
 ## Description:
 
-The following application can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
 
-![Below is an example of the Express Note Taker:](./public/assets/note.png)
 
 <a name="userstory"></a>
 

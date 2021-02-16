@@ -5,16 +5,8 @@ USE employee_tracker_db;
 INSERT INTO department
     (name)
 VALUES
-    ("Restaurant");
-
-INSERT INTO department
-    (name)
-VALUES
-    ("Human Resouces");
-
-INSERT INTO department
-    (name)
-VALUES
+    ("Restaurant"),
+    ("Human Resouces"),
     ("IT");
 
 ----- Role Seeds -----
@@ -22,22 +14,10 @@ VALUES
 INSERT INTO role
     (title, salary, department_id)
 VALUES
-    ("Stylist", 42000, 1);
-
-INSERT INTO role
-    (title, salary, department_id)
-VALUES
-    ("Assistant Store Manager", 60000, 1);
-
-INSERT INTO role
-    (title, salary, department_id)
-VALUES
-    ("Store Manager", 75000, 1);
-
-INSERT INTO role
-    (id, title, salary, department_id)
-VALUES
-    ("Brand Manager", 65000, 2);
+    ("Server", 42000, 3),
+    ("Delivery", 60000, 1),
+    ("Store Manager", 75000, 2),
+    ("Cook", 65000, 1;
 
 
 
@@ -46,20 +26,8 @@ VALUES
 INSERT INTO employee
     (first_name, last_name, role_id, manager_id)
 VALUES
-    ("Charbelle", "Chaz", 3, null);
-
-INSERT INTO employee
-    (first_name, last_name, role_id, manager_id)
-VALUES
-    ("Sofi", "Hernan", 4, 2);
-
-INSERT INTO employee
-    (first_name, last_name, role_id, manager_id)
-VALUES
-    ("Char", "Dant", 6, null);
-
-INSERT INTO employee
-    (first_name, last_name, role_id, manager_id)
-VALUES
-    ("Jonathan", "Uong", 9, 1);
+    ("Rose", "Nguyen", 3, null),
+    ("Thomas", "Train", 4, 2),
+    ("Peppa", "Peg", 6, null),
+    ("Spongebob", "Squarepants", 9, 1);
 
